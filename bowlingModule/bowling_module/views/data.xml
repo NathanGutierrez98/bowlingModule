@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record model="bowling_module.pista" id="pista1">
+        <field name="id_pista">1 </field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº1</field>
+      </record>
+
+      <record model="bowling_module.pista" id="pista2">
+        <field name="id_pista">2 </field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº2</field>
+      </record>
+
+      <record model="bowling_module.pista" id="pista3">
+        <field name="id_pista">3</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº3</field>
+      </record>
+
+      <record model="bowling_module.pista" id="pista4">
+        <field name="id_pista">4</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº4</field>
+      </record>
+      <record model="bowling_module.pista" id="pista5">
+        <field name="id_pista">5</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº5</field>
+      </record>
+
+      <record model="bowling_module.pista" id="pista6">
+        <field name="id_pista">6</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº6</field>
+      </record>
+
+      <record model="bowling_module.pista" id="pista7">
+        <field name="id_pista">7</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº7</field>
+      </record>
+
+      <record model="bowling_module.pista" id="pista8">
+        <field name="id_pista">8</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº8</field>
+      </record>
+
+      <record model="bowling_module.pista" id="pista9">
+        <field name="id_pista">9</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº9</field>
+      </record>
+
+      <record model="bowling_module.pista" id="pista10">
+        <field name="id_pista">10</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº10</field>
+      </record>
+
+
+      <record model="bowling_module.pista" id="pista10">
+        <field name="id_pista">10</field>
+        <field name="estado">0</field>
+        <field name="descripcion">Es la pista nº10</field>
+      </record>
+
+      <record model="bowling_module.empleados" id="Empleado1">
+            <field name="imagen" type="base64" file="/usr/lib/python3/dist-packages/odoo/addons/bowling_module/static/img/defecto.png"/>
+            <field name="id_empleado">14896574L</field>
+            <field name="nombre">Nathan</field>
+            <field name="apellidos">Gutiérrez Gil</field>
+            <field name="fecha_alta">2018-09-24</field>
+            <field name="descripcion">Tiene que ponerse las pilas</field>
+      </record>
+
+      <record model="bowling_module.empleados" id="Empleado2">
+            <field name="imagen" type="base64" file="/usr/lib/python3/dist-packages/odoo/addons/bowling_module/static/img/defecto.png"/>
+            <field name="id_empleado">25696499P</field>
+            <field name="nombre">Manuel</field>
+            <field name="apellidos">Fernández Marín</field>
+            <field name="fecha_alta">2017-05-12</field>
+            <field name="descripcion">Buen empleado, mejor persona</field>
+      </record>
+
+      <record model="bowling_module.empleados" id="Empleado3">
+            <field name="imagen" type="base64" file="/usr/lib/python3/dist-packages/odoo/addons/bowling_module/static/img/defecto.png"/>
+            <field name="id_empleado">36598421N</field>
+            <field name="nombre">María</field>
+            <field name="apellidos">Victoria Juan</field>
+            <field name="fecha_alta">2018-11-24</field>
+            <field name="descripcion">Becaria</field>
+      </record>
+
+      <record model="bowling_module.empleados" id="Empleado4">
+            <field name="imagen" type="base64" file="/usr/lib/python3/dist-packages/odoo/addons/bowling_module/static/img/defecto.png"/>
+            <field name="id_empleado">97685423N</field>
+            <field name="nombre">Rodolfo</field>
+            <field name="apellidos">Mateo Prado</field>
+            <field name="fecha_alta">2017-6-6</field>
+            <field name="descripcion">Empleado del año</field>
+      </record>
+
+      <record model="bowling_module.mantenimiento" id="mantenimiento1">
+            <field name="pista" eval="[(6, 0, [ref('pista1')])]"></field>
+            <field name="empleados" eval="[(6, 0, [ref('Empleado1')])]"></field>
+            <field name="fecha_mantenimiento">2019-01-30</field>
+            <field name="descripcion">Avería en el motor de la pista1</field>
+      </record>
+
+      <record model="bowling_module.mantenimiento" id="mantenimiento2">
+            <field name="pista" eval="[(6, 0, [ref('pista4')])]"></field>
+            <field name="empleados" eval="[(6, 0, [ref('Empleado4')])]"></field>
+            <field name="fecha_mantenimiento">2019-02-20</field>
+            <field name="descripcion">Bolo encasquillado en la pista4</field>
+      </record>
+
+      <record model="bowling_module.mantenimiento" id="mantenimiento3">
+            <field name="pista" eval="[(6, 0, [ref('pista7')])]"></field>
+            <field name="empleados" eval="[(6, 0, [ref('Empleado2')])]"></field>
+            <field name="fecha_mantenimiento">2019-02-16</field>
+            <field name="descripcion">Engrasado de motor de la pista7</field>
+      </record>
+
+      <record model="bowling_module.mantenimiento" id="mantenimiento4">
+            <field name="pista" eval="[(6, 0, [ref('pista4')])]"></field>
+            <field name="empleados" eval="[(6, 0, [ref('Empleado3')])]"></field>
+            <field name="fecha_mantenimiento">2019-02-1</field>
+            <field name="descripcion">Cambio de polea en la pista4</field>
+      </record>
+
+      <record model="bowling_module.mantenimiento" id="mantenimiento5">
+            <field name="pista" eval="[(6, 0, [ref('pista9')])]"></field>
+            <field name="empleados" eval="[(6, 0, [ref('Empleado2')])]"></field>
+            <field name="fecha_mantenimiento">2019-01-23</field>
+            <field name="descripcion">Cambio de polea en la pista4</field>
+      </record>
+
+      <record model="bowling_module.jugador" id="jugador1">
+            <field name="nombre">Rodolfo</field>
+            <field name="pie">44</field>
+
+      </record>
+
+      <record model="bowling_module.jugador" id="jugador2">
+            <field name="nombre">Mariano</field>
+            <field name="pie">41</field>
+      </record>
+
+      <record model="bowling_module.jugador" id="jugador3">
+            <field name="nombre">Julia</field>
+            <field name="pie">38</field>
+      </record>
+
+      <record model="bowling_module.jugador" id="jugador3">
+            <field name="nombre">Julia</field>
+            <field name="pie">38</field>
+      </record>
+
+      <record model="bowling_module.partidas" id="partida1">
+            <field name="pista" eval="[(6, 0, [ref('pista1')])]"></field>
+            <field name="jugador" eval="[(6, 0, [ref('jugador1'), ref('jugador2')])]"></field>
+            <field name="fecha_partida">2019-02-23</field>
+
+      </record>
+
+    <record model="bowling_module.partidas" id="partida2">
+            <field name="pista" eval="[(6, 0, [ref('pista3')])]"></field>
+            <field name="jugador" eval="[(6, 0, [ref('jugador1'), ref('jugador3'),ref('jugador2')])]"></field>
+            <field name="fecha_partida">2019-02-22</field>
+
+      </record>
+
+      <record model="bowling_module.partidas" id="partida3">
+              <field name="pista" eval="[(6, 0, [ref('pista2')])]"></field>
+              <field name="jugador" eval="[(6, 0, [ref('jugador1'), ref('jugador3'),ref('jugador2')])]"></field>
+              <field name="fecha_partida">2019-02-25</field>
+        </record>
+
+        <record model="bowling_module.partidas" id="partida4">
+                <field name="pista" eval="[(6, 0, [ref('pista5')])]"></field>
+                <field name="jugador" eval="[(6, 0, [ref('jugador1'), ref('jugador3'),ref('jugador2')])]"></field>
+          </record>
+
+          <record model="bowling_module.partidas" id="partida5">
+                  <field name="pista" eval="[(6, 0, [ref('pista9')])]"></field>
+                  <field name="jugador" eval="[(6, 0, [ref('jugador1'),ref('jugador2')])]"></field>
+            </record>
+
+
+
+    </data>
+</odoo>

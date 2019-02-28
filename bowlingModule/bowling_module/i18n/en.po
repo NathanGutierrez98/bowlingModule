@@ -1,0 +1,334 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bowling_module
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20181017\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-28 16:20+0000\n"
+"PO-Revision-Date: 2019-02-28 17:28+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Language: en\n"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_fecha_mantenimiento
+msgid " Fecha mantenimiento "
+msgstr "Maintenance Date"
+
+#. module: bowling_module
+#: selection:bowling_module.partidas,precio:0
+msgid "3.50"
+msgstr ""
+
+#. module: bowling_module
+#: selection:bowling_module.partidas,precio:0
+msgid "4.50"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_fecha_alta
+msgid "Alta del empleado"
+msgstr "Employee discharge date"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_apellidos
+#: model:ir.ui.view,arch_db:bowling_module.empleados_search_view
+msgid "Apellidos"
+msgstr "Lastname"
+
+#. module: bowling_module
+#: model:ir.ui.view,arch_db:bowling_module.mantenimiento_search_view
+#: model:ir.ui.view,arch_db:bowling_module.partidas_search_view
+msgid "Ayer"
+msgstr "Yesterday"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_create_uid
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador_create_uid
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_create_uid
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_create_uid
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_create_date
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador_create_date
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_create_date
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_create_date
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: bowling_module
+#: selection:bowling_module.pista,estado:0
+msgid "Desuso"
+msgstr "Not playing"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_display_name
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador_display_name
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_display_name
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_display_name
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: bowling_module
+#: sql_constraint:bowling_module.empleados:0
+msgid "ESE DNI YA EXISTE"
+msgstr "THE DNI EXISTS"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_empleados
+msgid "Empleado"
+msgstr "Employee"
+
+#. module: bowling_module
+#: sql_constraint:bowling_module.pista:0
+msgid "Ese id ya existe"
+msgstr "The id exists"
+
+#. module: bowling_module
+#: model:ir.ui.view,arch_db:bowling_module.pista
+msgid "Estado"
+msgstr "State"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_estado
+msgid "Estado de la pista"
+msgstr "State of bowling lane"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_fecha_partida
+msgid "Fecha de partida"
+msgstr "Game date"
+
+#. module: bowling_module
+#: model:ir.actions.act_window,name:bowling_module.empleados_action_window
+msgid "Gestión de Empleados"
+msgstr "Employees Management"
+
+#. module: bowling_module
+#: model:ir.actions.act_window,name:bowling_module.mantenimientos_action_window
+msgid "Gestión de Mantenimientos"
+msgstr "Maintenance Management"
+
+#. module: bowling_module
+#: model:ir.actions.act_window,name:bowling_module.partidas_action_window
+msgid "Gestión de Partidas"
+msgstr "Games Management "
+
+#. module: bowling_module
+#: model:ir.actions.act_window,name:bowling_module.pistas_action_window
+msgid "Gestión de Pistas"
+msgstr "Bowling lane management"
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_empleados
+msgid "Gestión de empleados"
+msgstr "Employees management"
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_mantenimientos
+msgid "Gestión de mantenimientos"
+msgstr "Maintenance management"
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_partidas
+msgid "Gestión de partidas"
+msgstr "Games management"
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_pistas
+msgid "Gestión de pistas"
+msgstr "Bowling lanes management"
+
+#. module: bowling_module
+#: model:ir.ui.view,arch_db:bowling_module.mantenimiento_search_view
+#: model:ir.ui.view,arch_db:bowling_module.partidas_search_view
+msgid "Hace 1 mes"
+msgstr "1 month ago"
+
+#. module: bowling_module
+#: model:ir.ui.view,arch_db:bowling_module.mantenimiento_search_view
+#: model:ir.ui.view,arch_db:bowling_module.partidas_search_view
+msgid "Hace 7 días"
+msgstr "7 days ago"
+
+#. module: bowling_module
+#: model:ir.ui.view,arch_db:bowling_module.mantenimiento_search_view
+#: model:ir.ui.view,arch_db:bowling_module.partidas_search_view
+msgid "Hoy"
+msgstr "Today"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_id
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador_id
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_id
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_id
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_id
+msgid "ID"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.ui.view,arch_db:bowling_module.empleados_search_view
+msgid "ID de empleado"
+msgstr "Employee ID"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_imagen
+msgid "Imagen"
+msgstr "Image"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_importe_total
+msgid "Importe Total"
+msgstr "Total amount"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_jugador
+msgid "Jugador"
+msgstr "Player"
+
+#. module: bowling_module
+#: selection:bowling_module.pista,estado:0
+msgid "Jugando"
+msgstr "Playing"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados___last_update
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador___last_update
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento___last_update
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas___last_update
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_write_uid
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador_write_uid
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_write_uid
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_write_uid
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_write_date
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador_write_date
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_write_date
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_write_date
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_empleados_list
+msgid "Listado empleados"
+msgstr "Employees list"
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_mantenimientos_list
+msgid "Listado mantenimientos"
+msgstr "Maintenance list"
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_partidas_list
+msgid "Listado partidas"
+msgstr "Games list"
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_pistas_list
+msgid "Listado pistas"
+msgstr "bowling lanes list"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_nombre
+#: model:ir.ui.view,arch_db:bowling_module.empleados
+#: model:ir.ui.view,arch_db:bowling_module.empleados_search_view
+msgid "Nombre"
+msgstr "Name"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador_nombre
+msgid "Nombre de jugador"
+msgstr "Player name"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_descripcion
+msgid "Notas de la pista"
+msgstr "Description"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_descripcion
+msgid "Notas de mantenimiento"
+msgstr "Description"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_descripcion
+msgid "Notas del empleado"
+msgstr "Description"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_empleados_id_empleado
+msgid "Numero de empleado"
+msgstr "Employee id"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_jugador_pie
+msgid "Numero de pie"
+msgstr "Foot number"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_pista_id_pista
+msgid "Número pista"
+msgstr "Bowling lane number"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_mantenimiento_pista
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_pista
+msgid "Pista"
+msgstr "Bowling lane"
+
+#. module: bowling_module
+#: model:ir.model.fields,field_description:bowling_module.field_bowling_module_partidas_precio
+msgid "Precio"
+msgstr "Price"
+
+#. module: bowling_module
+#: model:ir.ui.menu,name:bowling_module.menu_root
+msgid "bowlingModule"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model,name:bowling_module.model_bowling_module_empleados
+msgid "bowling_module.empleados"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model,name:bowling_module.model_bowling_module_jugador
+msgid "bowling_module.jugador"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model,name:bowling_module.model_bowling_module_mantenimiento
+msgid "bowling_module.mantenimiento"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model,name:bowling_module.model_bowling_module_partidas
+msgid "bowling_module.partidas"
+msgstr ""
+
+#. module: bowling_module
+#: model:ir.model,name:bowling_module.model_bowling_module_pista
+msgid "bowling_module.pista"
+msgstr ""

@@ -1,0 +1,312 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="bowling_module.pista">
+      <field name="name">Listado de pistas</field>
+      <field name="model">bowling_module.pista</field>
+      <field name="arch" type="xml">
+      <tree decoration-success="estado == '1'" decoration-danger="estado == '0'" >
+      <button name ="cambiar_estado" string = "Estado" class="oe_right" type="object"/>
+      <field name="id_pista"/>
+      <field name="estado"/>
+      <field name="descripcion"/>
+
+    </tree>
+    </field>
+    </record>
+
+    <record model="ir.ui.view" id="bowling_module.pista_search_view">
+      <field name="name">Listado de pistas</field>
+      <field name="model">bowling_module.pista</field>
+      <field name="arch" type="xml">
+      <search>
+      <field name="id_pista"/>
+      <field name="estado"/>
+      <field name="descripcion"/>
+      <filter name="Desuso" domain="[('estado','=','0')]"/>
+      <filter name="Jugando" domain="[('estado','=','1')]"/>
+    </search>
+    </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="bowling_module.empleados">
+      <field name="name">Listado de Empleados</field>
+      <field name="model">bowling_module.empleados</field>
+      <field name="arch" type="xml">
+
+
+          <tree>
+          <field name = "imagen" widget ="image" height="50" width="50"/>
+          <field name="id_empleado"/>
+          <field name="nombre" string = "Nombre"/>
+          <field name="apellidos"/>
+          <field name="fecha_alta"/>
+          <field name="descripcion"/>
+
+        </tree>
+
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="bowling_module.empleados_search_view">
+      <field name="name">Listado de Empleados</field>
+      <field name="model">bowling_module.empleados</field>
+      <field name="arch" type="xml">
+          <search>
+          <field name="id_empleado" string = "ID de empleado"/>
+          <field name="nombre" string = "Nombre "/>
+          <field name="apellidos" string = "Apellidos"/>
+        </search>
+      </field>
+    </record>
+
+
+
+
+    <record model="ir.ui.view" id="bowling_module.mantenimiento_form">
+      <field name="name">Listado de mantenimientos</field>
+      <field name="model">bowling_module.mantenimiento</field>
+      <field name="arch" type="xml">
+
+        <form>
+        <group colspan ="4" col="2">
+        <field name ="empleados">
+          <tree>
+              <field name = "imagen" widget ="image" height="50" width="50"  class="oe_right oe_avatar"/>
+              <field name="id_empleado"/>
+              <field name="nombre"/>
+              <field name="apellidos"/>
+          </tree>
+        </field>
+        <field name ="pista">
+          <tree>
+              <field name="id_pista"/>
+              <field name="estado"/>
+          </tree>
+        </field>
+        <field name="fecha_mantenimiento"/>
+        <field name="descripcion"/>
+
+      </group>
+      </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="bowling_module.mantenimiento_tree">
+      <field name="name">Listado de mantenimientos</field>
+      <field name="model">bowling_module.mantenimiento</field>
+      <field name="arch" type="xml">
+
+      <tree>
+        <field name ="empleados"/>
+
+        <field name ="pista"/>
+
+        <field name="fecha_mantenimiento"/>
+        <field name="descripcion"/>
+
+    </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="bowling_module.mantenimiento_search_view">
+      <field name="name">Listado de mantenimiento</field>
+      <field name="model">bowling_module.mantenimiento</field>
+      <field name="arch" type="xml">
+          <search>
+            <filter string="Hoy" domain="[('fecha_mantenimiento', '&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')),('fecha_mantenimiento', '&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:59:59'))]"/>
+            <filter string="Ayer" domain="[('fecha_mantenimiento','&gt;=', ((context_today()-datetime.timedelta(days=1)).strftime('%Y-%m-%d 00:00:00'))), ('fecha_mantenimiento','&lt;=', ((context_today()+datetime.timedelta(days=0)).strftime('%Y-%m-%d 00:00:00')))]"/>
+            <filter string ="Hace 7 días" domain= "[('fecha_mantenimiento','&gt;', ((context_today()-datetime.timedelta(days=7)).strftime('%Y-%m-%d 00:00:00'))), ('fecha_mantenimiento','&lt;=', ((context_today()+datetime.timedelta(days=0)).strftime('%Y-%m-%d 00:00:00')))]"/>
+            <filter string ="Hace 1 mes" domain= "[('fecha_mantenimiento','&gt;', ((context_today()-datetime.timedelta(days=30)).strftime('%Y-%m-%d 00:00:00'))), ('fecha_mantenimiento','&lt;=', ((context_today()+datetime.timedelta(days=0)).strftime('%Y-%m-%d 00:00:00')))]"/>
+        </search>
+      </field>
+    </record>
+
+
+
+    <record model="ir.ui.view" id="bowling_module.jugador">
+      <field name="name">Listado de jugadores</field>
+      <field name="model">bowling_module.jugador</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="nombre"/>
+          <field name="pie"/>
+        </tree>
+      </field>
+    </record>
+
+
+
+    <record model="ir.ui.view" id="bowling_module.partidas_form">
+      <field name="name">Listado de partidas</field>
+      <field name="model">bowling_module.partidas</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="4" col="2">
+          <field name="pista">
+            <tree>
+              <field name="id_pista"/>
+              <field name="estado"/>
+            </tree>
+          </field>
+          <field name="jugador">
+          <tree>
+            <field name="nombre"/>
+            <field name="pie"/>
+          </tree>
+        </field>
+          <field name="fecha_partida"/>
+          <field name="precio"/>
+          <field name="importe_total"/>
+
+      </group>
+      </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="bowling_module.partidas_tree">
+      <field name="name">Listado de partidas</field>
+      <field name="model">bowling_module.partidas</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="pista"/>
+          <field name="jugador"/>
+          <field name="fecha_partida"/>
+          <field name="precio"/>
+          <field name="importe_total"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="bowling_module.partidas_search_view">
+      <field name="name">Listado de partidas</field>
+      <field name="model">bowling_module.partidas</field>
+      <field name="arch" type="xml">
+          <search>
+            <filter string="Hoy" domain="[('fecha_partida', '&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')),('fecha_partida', '&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:59:59'))]"/>
+            <filter string="Ayer" domain="[('fecha_partida','&gt;=', ((context_today()-datetime.timedelta(days=1)).strftime('%Y-%m-%d 00:00:00'))), ('fecha_partida','&lt;=', ((context_today()+datetime.timedelta(days=0)).strftime('%Y-%m-%d 00:00:00')))]"/>
+            <filter string ="Hace 7 días" domain= "[('fecha_partida','&gt;', ((context_today()-datetime.timedelta(days=7)).strftime('%Y-%m-%d 00:00:00'))), ('fecha_partida','&lt;=', ((context_today()+datetime.timedelta(days=0)).strftime('%Y-%m-%d 00:00:00')))]"/>
+            <filter string ="Hace 1 mes" domain= "[('fecha_partida','&gt;', ((context_today()-datetime.timedelta(days=30)).strftime('%Y-%m-%d 00:00:00'))), ('fecha_partida','&lt;=', ((context_today()+datetime.timedelta(days=0)).strftime('%Y-%m-%d 00:00:00')))]"/>
+        </search>
+      </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- actions opening views on models -->
+
+
+    <record model="ir.actions.act_window" id="bowling_module.pistas_action_window">
+      <field name="name">Gestión de Pistas</field>
+      <field name="res_model">bowling_module.pista</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="bowling_module.mantenimientos_action_window">
+      <field name="name">Gestión de Mantenimientos</field>
+      <field name="res_model">bowling_module.mantenimiento</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="bowling_module.empleados_action_window">
+      <field name="name">Gestión de Empleados</field>
+      <field name="res_model">bowling_module.empleados</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="bowling_module.partidas_action_window">
+      <field name="name">Gestión de Partidas</field>
+      <field name="res_model">bowling_module.partidas</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="bowling_module.action_server">
+      <field name="name">bowlingModule server</field>
+      <field name="model_id" ref="model_bowling_module_bowling_module"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <menuitem name="bowlingModule" id="bowling_module.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Gestión de pistas" id="bowling_module.menu_pistas" parent="bowling_module.menu_root"/>
+    <menuitem name="Gestión de mantenimientos" id="bowling_module.menu_mantenimientos" parent="bowling_module.menu_root"/>
+    <menuitem name="Gestión de empleados" id="bowling_module.menu_empleados" parent="bowling_module.menu_root"/>
+    <menuitem name="Gestión de partidas" id="bowling_module.menu_partidas" parent="bowling_module.menu_root"/>
+
+
+
+
+
+
+    <!-- actions -->
+
+    <menuitem name="Listado pistas" id="bowling_module.menu_pistas_list" parent="bowling_module.menu_pistas"
+              action="bowling_module.pistas_action_window"/>
+
+   <menuitem name="Listado mantenimientos" id="bowling_module.menu_mantenimientos_list" parent="bowling_module.menu_mantenimientos"
+              action="bowling_module.mantenimientos_action_window"/>
+
+   <menuitem name="Listado empleados" id="bowling_module.menu_empleados_list" parent="bowling_module.menu_empleados"
+              action="bowling_module.empleados_action_window"/>
+
+  <menuitem name="Listado partidas" id="bowling_module.menu_partidas_list" parent="bowling_module.menu_partidas"
+             action="bowling_module.partidas_action_window"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </data>
+</odoo>

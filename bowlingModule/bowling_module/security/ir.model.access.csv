@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_bowling_module_bowling_module,bowling_module.bowling_module,model_bowling_module_bowling_module,,1,0,0,0
